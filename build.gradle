@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    testImplementation.extendsFrom implementation
+}
+
+dependencies {
+    implementation 'org.ow2.asm:asm:9.3'
+    implementation 'org.ow2.asm:asm-util:9.3'
+    implementation 'org.ow2.asm:asm-tree:9.3'
+
+    implementation 'ch.qos.logback:logback-classic:1.3.0-alpha16'
+
+    compileOnly 'org.jetbrains:annotations:23.0.0'
+
+    implementation 'org.eclipse.jdt:ecj:3.30.0'
+}
+
+compileTestJava.destinationDir(project.file('testout'))
+
+sourceCompatibility = JavaVersion.VERSION_17

@@ -1,0 +1,11 @@
+import java.lang.System
+import java.io.PrintStream as Out
+
+publicf class SomeTest {
+    static fn main(str[] arg) {
+        define v as str = "12"
+        define sout as Out = System.out
+        sout.println(v)
+        sout.println(arg[1])
+    }
+}
